@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+body section:nth-child(1)::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(./img/background-parallax.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(1px);
+}
+
+body section:nth-child(1)::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(./img/background-parallax-front.png);
+    background-size: cover;
+    filter: blur(0.4px);
+}
+
+body section:nth-child(1) h2{
+    top:10%;
+    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%, -30%);
+}
+
+body section:nth-child(2){
+    background-color: rgb(68, 35, 19);
+}
+
+h2{
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size: 15vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255,255,255,0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
